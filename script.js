@@ -1,3 +1,5 @@
 const button=document.querySelector('.language');
 let english=false;
 button.addEventListener('click',()=>{english=!english;document.documentElement.lang=english?'en':'es';document.querySelectorAll('[data-es]').forEach(el=>el.textContent=el.dataset[english?'en':'es']);button.innerHTML=english?'<span>ES</span> / <span class="active">EN</span>':'<span class="active">ES</span> / <span>EN</span>';});
+const passage=document.querySelector('.baula-passage');
+if(passage&&'IntersectionObserver'in window){new IntersectionObserver(([entry],observer)=>{if(entry.isIntersecting){passage.classList.add('is-visible');observer.unobserve(passage)}},{threshold:.35}).observe(passage)}else if(passage){passage.classList.add('is-visible')}

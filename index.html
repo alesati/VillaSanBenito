@@ -23,19 +23,21 @@
   @keyframes baula-swim{0%,100%{transform:translate3d(0,0,0) rotate(-2deg)}25%{transform:translate3d(15px,-17px,0) rotate(2deg)}55%{transform:translate3d(-10px,-36px,0) rotate(-1deg)}78%{transform:translate3d(9px,-19px,0) rotate(2deg)}}
   @media (prefers-reduced-motion:reduce){.baula-journey{animation:none}}@media(max-width:760px){.baula-journey{right:4%!important;bottom:185px!important;width:205px!important;opacity:.38!important}}
 </style>
+<style>
+  .topbar{height:88px!important;padding:13px 5.6%!important;background:#f7f2e8!important;border-bottom:1px solid #d9d0c1!important;box-shadow:none!important}.topbar .brand-mark{width:49px!important;height:49px!important}.nav-pill{gap:0!important;border:1px solid #d7cdbc;border-radius:999px;padding:3px 7px}.nav-pill a{padding:7px 12px!important;font-size:12px!important}.topbar nav a:after{display:none}.nav-pill a:hover{background:#e4dbc9;border-radius:999px}.header-actions{display:flex;align-items:center;gap:15px}.header-book{background:#193f3d;color:#fff;text-decoration:none;padding:10px 17px;font-size:12px;font-weight:600;border-radius:999px}.header-book:hover{background:#b86647}.baula-passage{min-height:330px;background:#e8dfce;position:relative;overflow:hidden;display:flex;align-items:center;padding:55px 11%;color:#193f3d}.passage-copy{max-width:360px;position:relative;z-index:2}.passage-copy p:last-child{font:500 clamp(1.55rem,2.5vw,2.4rem)/1.18 'Playfair Display',serif;margin:0}.baula-passage-art{position:absolute;width:330px;right:17%;bottom:-215px;opacity:0;transform:translateY(110px) rotate(-7deg);transition:opacity 1s ease,transform 1.3s cubic-bezier(.2,.8,.2,1);mix-blend-mode:multiply}.baula-passage.is-visible .baula-passage-art{opacity:1;transform:translateY(0) rotate(0)}.passage-number{position:absolute;right:8%;top:42px;font:11px 'DM Mono';color:#b86647;letter-spacing:.16em}.baula-journey{display:none!important}@media(max-width:760px){.topbar{height:76px!important}.topbar .brand-mark{width:40px!important;height:40px!important}.header-book{padding:9px 12px}.header-actions{gap:9px}.nav-pill{display:none!important}.baula-passage{min-height:370px;padding:45px 8%;align-items:flex-start}.baula-passage-art{width:260px;right:-25px;bottom:-165px}.passage-number{right:8%;top:30px}}
+</style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Villa San Benito, inicio"><img class="brand-mark" src="images/logo-baula-san-benito.png" alt="Emblema de una tortuga baula con cruz de San Benito"><span>VILLA<br><b>SAN BENITO</b></span></a>
-    <nav aria-label="Navegación principal"><a href="#villa" data-es="La villa" data-en="The villa">La villa</a><a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a><a href="#tarifas" data-es="Tarifas" data-en="Rates">Tarifas</a><a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a></nav>
-    <button class="language" type="button" aria-label="Cambiar idioma"><span class="active">ES</span> / <span>EN</span></button>
+    <nav class="nav-pill" aria-label="Navegación principal"><a href="#villa" data-es="La villa" data-en="The villa">La villa</a><a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a><a href="#tarifas" data-es="Tarifas" data-en="Rates">Tarifas</a><a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a></nav>
+    <div class="header-actions"><button class="language" type="button" aria-label="Cambiar idioma"><span class="active">ES</span> / <span>EN</span></button><a class="header-book" href="#contacto" data-es="Reservar" data-en="Book now">Reservar</a></div>
   </header>
 
   <main>
     <section id="inicio" class="hero">
       <img src="images/pool-exterior.jpeg" alt="Piscina y exterior de Villa San Benito al atardecer">
       <div class="hero-shade"></div>
-      <img class="baula-journey" src="images/baula-journey.png" alt="" aria-hidden="true">
       <div class="hero-copy">
         <p class="eyebrow" data-es="GUANACASTE · COSTA RICA" data-en="GUANACASTE · COSTA RICA">GUANACASTE · COSTA RICA</p>
         <h1 data-es="Donde la familia se siente en casa." data-en="Where family feels at home.">Donde la familia se siente en casa.</h1>
@@ -44,6 +46,12 @@
       </div>
       <div class="mini-book"><div><small data-es="DESTINO" data-en="DESTINATION">DESTINO</small><strong>Guanacaste, Costa Rica</strong></div><div><small data-es="ESTANCIA" data-en="STAY">ESTANCIA</small><strong data-es="Familias y grupos" data-en="Families & groups">Familias y grupos</strong></div><a href="#contacto" data-es="PLANEAR MI ESTANCIA →" data-en="PLAN MY STAY →">PLANEAR MI ESTANCIA →</a></div>
       <div class="turtle-note" data-es="Inspirada en la baula" data-en="Inspired by the leatherback">Inspirada en la baula</div>
+    </section>
+
+    <section class="baula-passage" aria-label="El espíritu de la baula">
+      <div class="passage-copy"><p class="eyebrow dark" data-es="EL ESPÍRITU DEL LUGAR" data-en="THE SPIRIT OF THIS PLACE">EL ESPÍRITU DEL LUGAR</p><p data-es="Como la baula, aquí todo invita a seguir su propio ritmo." data-en="Like the leatherback, everything here invites you to follow your own rhythm.">Como la baula, aquí todo invita a seguir su propio ritmo.</p></div>
+      <img class="baula-passage-art" src="images/baula-passage.png" alt="Ilustración de una tortuga baula nadando">
+      <span class="passage-number">01</span>
     </section>
 
     <section class="experience-strip" aria-label="La experiencia Villa San Benito">
