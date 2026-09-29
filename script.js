@@ -1,0 +1,5 @@
+const button=document.querySelector('.language');
+let english=false;
+button.addEventListener('click',()=>{english=!english;document.documentElement.lang=english?'en':'es';document.querySelectorAll('[data-es]').forEach(el=>el.textContent=el.dataset[english?'en':'es']);button.innerHTML=english?'<span>ES</span> / <span class="active">EN</span>':'<span class="active">ES</span> / <span>EN</span>';});
+const passage=document.querySelector('.baula-passage');
+if(passage){const turtle=passage.querySelector('.baula-passage-art');let shown=false;const moveTurtle=()=>{const rect=passage.getBoundingClientRect(),view=window.innerHeight;const progress=Math.max(0,Math.min(1,(view-rect.top)/(view+rect.height)));if(progress>.08){shown=true;passage.classList.add('is-visible')}if(turtle&&shown&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const y=110-(progress*145),x=Math.sin(progress*Math.PI*2)*18,r=-7+(progress*13);turtle.style.setProperty('--swim-y',`${y}px`);turtle.style.setProperty('--swim-x',`${x}px`);turtle.style.setProperty('--swim-r',`${r}deg`)}};addEventListener('scroll',moveTurtle,{passive:true});addEventListener('resize',moveTurtle);moveTurtle()}
